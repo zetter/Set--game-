@@ -1,0 +1,6 @@
+A ruby implementation of the game Set[1].
+It can deal cards and calculate matches.
+Matching is done using the O(n^2p) method as described in [2].
+
+[1] - http://en.wikipedia.org/wiki/Set_(game)
+[2] - http://www.cs.uiuc.edu/homes/pbg/papers/set.pdf
