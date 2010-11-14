@@ -64,7 +64,7 @@ class SetGame
   end
 
   def self.matching_card(c1, c2)
-    0.upto(3).map do |n|
+    0.upto(CHOICES.length - 1).map do |n|
       if c1[n] == c2[n]
         c1[n]
       else
