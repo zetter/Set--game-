@@ -56,16 +56,15 @@ class SetGame
   def first_match
     deal.each do |c1|
       (deal - [c1]).each do |c2|
-        c3 = matching_card(c1, c2)
+        c3 = SetGame.matching_card(c1, c2)
         return [c1, c2, c3] if deal.include?(c3)
       end
     end
     nil
   end
 
-private
-  def matching_card(c1, c2)
-    required = 0.upto(3).map do |n|
+  def self.matching_card(c1, c2)
+    0.upto(3).map do |n|
       if c1[n] == c2[n]
         c1[n]
       else
